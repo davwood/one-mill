@@ -33,6 +33,7 @@ class Counting
 	end
 
 	def convert(number)
+
 		# convert the number to a string
 
 		# count the numbers. 6 will be hundred thousand. 3 will be hundred etc.
@@ -48,6 +49,9 @@ class Counting
 		else
 			@words[number]
 		end
+
+		@words[number]
+
 	end
 
 	def count_to_twenty
@@ -55,5 +59,6 @@ class Counting
 			convert(i)
 		end
 	end
+
 
 end
