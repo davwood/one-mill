@@ -1,37 +1,47 @@
 class Counting
 
-	def initialize(max)
-		@max = max
-		@basic_numbers = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"] 
-		@teens = ["eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"]
-		@numbers_ty = ["twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"]
+	def initialize
+		  @words = {
+		    1 => 'one',
+		    2 => 'two',
+		    3 => 'three',
+		    4 => 'four', 
+		    5 => 'five', 
+		    6 => 'six',
+		    7 => 'seven',
+		    8 => 'eight',
+		    9 => 'nine',
+		    10 => 'ten',
+		    11 => 'eleven',
+		    12 => 'twelve',
+		    13 => 'thirteen',
+		    14 => 'fourteen',
+		    15 => 'fifteen',
+		    16 => 'sixteen',
+		    17 => 'seventeen',
+		    18 => 'eighteen',
+		    19 => 'nineteen',
+		    20 => 'twenty',
+		    30 => 'thirty',
+		    40 => 'fourty',
+		    50 => 'fifty', 
+		    60 => 'sixty',
+		    70 => 'seventy',
+		    80 => 'eighty',
+		    90 => 'ninety',
+		  }
 	end
 
-	def count_in_numbers
-		i = 0
+	def convert(number)
+		@words[number]
+	end
 
-		while i <= @max do
-			puts i 
-			i = i + 1
+	def count_to_twenty
+		for i in 1..20 
+			convert(i)
 		end
 	end
 
 
-	def count_in_words
-		@basic_numbers.each do |num|
-			puts "#{num}"
-		end
-
-		@teens.each do |teen|
-			puts "#{teen}"
-		end
-
-		@numbers_ty.each do |number_ty|
-
-			@basic_numbers.each do |number|
-				puts "#{number_ty}" + "-" "#{number}"
-			end
-		end
-	end
-
+  
 end

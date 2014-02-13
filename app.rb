@@ -1,5 +1,7 @@
 require './lib/counting.rb'
 
-counting = Counting.new(100)
+counting = Counting.new
 
-counting.count_in_words
+counting.convert(2)
+
+counting.count_to_twenty
