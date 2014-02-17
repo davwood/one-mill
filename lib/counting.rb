@@ -38,11 +38,11 @@ class Counting
 	end
 
 	def count_to_ninty_nine(number)
-		if (10..20).include?(number)
+		if (10..20).include?(number) || [30, 40, 50, 60, 70, 80, 90].include?(number)
 			@words[number]
 
-		elsif [30, 40, 50, 60, 70, 80, 90].include?(number)
-			@words[number]
+		# elsif [30, 40, 50, 60, 70, 80, 90].include?(number)
+			# @words[number]
 
 		else
 			array=number.to_s.split("")
