@@ -38,4 +38,25 @@ describe Counting do
     expect(converter.convert(21)).to eq 'twenty one'
   end
 
+  it "should convert the number '121' to the word 'one hundred and twenty one' " do
+    expect(converter.convert(121)).to eq 'one hundred and twenty one'
+  end
+
+  it "should convert the number '1121' to the word 'one thousand one hundred and twenty one' " do
+    expect(converter.convert(1121)).to eq 'one thousand one hundred and twenty one'
+  end
+
+
+  it "should convert the number '11121' to the word 'one hundred and twenty one' " do
+    expect(converter.convert(11121)).to eq 'eleven thousand one hundred and twenty one'
+  end
+
+  it "should convert the number '111121' to the word 'one hundred and twenty one' " do
+    expect(converter.convert(111121)).to eq ' one hundred and eleven thousand one hundred and twenty one'
+  end
+
+  it "should convert the number '1000000' to the word 'one million' " do
+    expect(converter.convert(1000000)).to eq ' one million'
+  end
+
 end

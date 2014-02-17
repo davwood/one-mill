@@ -2,6 +2,6 @@ require './lib/counting.rb'
 
 counting = Counting.new
 
-counting.convert(2)
+counting.convert()
 
 #£counting.count_to_twenty

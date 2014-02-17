@@ -41,26 +41,23 @@ class Counting
 		if (10..20).include?(number) || [30, 40, 50, 60, 70, 80, 90].include?(number)
 			@words[number]
 
-		# elsif [30, 40, 50, 60, 70, 80, 90].include?(number)
-			# @words[number]
-
 		else
 			array=number.to_s.split("")
-			@word[(array[0] + "0").to_i] + @word[array[1].to_i]
+			@words[(array[0] + "0").to_i] + " " + @words[array[1].to_i]
 		end 
     end 
 
 	def count_to_nine_hundred_ninty_nine(number=0)
 		array=number.to_s.split("")
 		last_two_digital = (array[1]+ array[2]).to_i
-        @word[array[0].to_i] + "hundred" + count_to_ninty_nine(last_two_digital)
+        @words[array[0].to_i] + " " + "hundred" + " " + "and" + " " + count_to_ninty_nine(last_two_digital)
 
 	end 
 
 	def count_above_thousand(number=0)
 		array=number.to_s.split("")
 		array.length = n
-        number_of_thousand(n)+"thousand"+count_to_nine_hundred_ninty_nine(last_three_digital)
+        number_of_thousand(n)+ " " + "thousand" + " " + count_to_nine_hundred_ninty_nine(last_three_digital)
 		
 		 	
 		private def number_of_thousand(n=0)
