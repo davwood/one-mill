@@ -56,12 +56,14 @@ class Counting
 
 	def count_above_thousand(number=0)
 		array=number.to_s.split("")
-		array.length = n
-        number_of_thousand(n)+ " " + "thousand" + " " + count_to_nine_hundred_ninty_nine(last_three_digital)
-		
-		 	
-		private def number_of_thousand(n=0)
-		  m=(n-3)%3
+		n = array.length 
+		last_three_digital = (array[n-1]+array[n-2]+array[n-3]).to_i
+        number_of_thousand(n, array)+ " " + "thousand" + " " + count_to_nine_hundred_ninty_nine(last_three_digital)
+	end 
+
+     	
+		def number_of_thousand(n=0, array=[])
+		     m=(n-3)%4
 		  if m==3
 			 count_to_nine_hundred_ninty_nine((array[0]+array[1]+array[2]).to_i)
           elsif m==2
@@ -70,8 +72,6 @@ class Counting
           	 count_to_nine(array[0].to_i)
           end 
 	    end 
-	end 
-
 
     def convert(i=0)
       if (1..9).include?(i)
@@ -81,9 +81,9 @@ class Counting
       elsif (100..999).include?(i)
       	count_to_nine_hundred_ninty_nine(i)
       elsif (1000..999999).include?(i)
-      	count_to_thousand_and_above(i)
+      	count_above_thousand(i)
       elsif i == 1000000
-      	puts "one million"
+      	return "one million"
       #else
       	# if the number is above one million, throw an error
       end
