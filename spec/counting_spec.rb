@@ -38,4 +38,23 @@ describe Counting do
     expect(converter.convert(21)).to eq 'twenty one'
   end
 
+  it "should convert the number '861' to the word 'eight hundred and sixty one' " do
+    expect(converter.convert(861)).to eq 'eight hundred and sixty one'
+  end
+
+  it "should convert the number '2104' to the word 'two thousand one hundred and four' " do
+    expect(converter.convert(2104)).to eq 'two thousand one hundred and four'
+  end
+
+  it "should convert the number '32104' to the word 'thirty two thousand one hundred and four' " do
+    expect(converter.convert(32104)).to eq 'thirty two thousand one hundred and four'
+  end
+
+  it "should convert the number '164508' to the word 'one hundred and sixty four thousand five hundred and eight' " do
+    expect(converter.convert(164508)).to eq 'one hundred and sixty four thousand five hundred and eight'
+  end
+
+  it "should convert the number '413560' to the word 'four hundred and thirteen thousand five hundred and sixty' " do
+    expect(converter.convert(413560)).to eq 'four hundred and thirteen thousand five hundred and sixty'
+  end
 end
