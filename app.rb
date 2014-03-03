@@ -1,7 +1,7 @@
-require './lib/counting.rb'
+require './lib/one_million.rb'
 
-counting = Counting.new
+onemill = Onemillion.new
 
-counting.convert(2)
+onemill.convert(2)
 
-counting.count_to_twenty
+#£counting.count_to_twenty
