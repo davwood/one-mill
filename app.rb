@@ -1,6 +1,6 @@
 require './lib/one_million.rb'
 
-onemill = Onemillion.new
+onemill = One_million.new
 
 onemill.convert(2)
 
