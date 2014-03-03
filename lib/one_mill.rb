@@ -30,5 +30,19 @@ class One_million
 		    90 => 'ninety',
 
 		}
+
+		def count_99(num)
+		num = num
+		array = num.to_s.split("")
+		
+		if num == 0
+			 ""
+	    # elsif @words[array.join.to_i].nil? 
+		elsif @words[num].nil? 
+			@words[(array[0] + "0").to_i] + " " + @words[array[1].to_i]
+		else 
+			@words[array.join.to_i]
+		end
+	end
 	
 end 
