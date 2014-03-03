@@ -1,4 +1,4 @@
-require './lib/one_million.rb'
+require './lib/one_mill.rb'
 
 onemill = One_million.new
 

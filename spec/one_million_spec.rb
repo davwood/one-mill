@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Onemillion do 
+describe One_million do 
 	let(:converter) { One_million.new }
 
   it "should convert the number '21' to the word 'twenty one' " do
