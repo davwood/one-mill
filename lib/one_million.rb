@@ -45,10 +45,10 @@ class Onemillion
 				count_999(number_array.take(3).join.to_i) + " thousand" + 
 				above100?(number_array[-3,3].join.to_i) + count_999(number_array[-3,3].join.to_i)
 			when number_length == 5
-				count_999(number_array.take(2).join.to_i) + " thousand" + 
+				count_999(number_array.take(2).join.to_i) + "thousand" + 
 				above100?(number_array[-3,3].join.to_i) + count_999(number_array[-3,3].join.to_i)
 			when number_length == 4
-				count_999(number_array.take(1).join.to_i) + " thousand" + 
+				count_999(number_array.take(1).join.to_i) + "thousand" + 
 				above100?(number_array[-3,3].join.to_i) + count_999(number_array[-3,3].join.to_i)
 			else
 				count_999(number_array.join.to_i)
@@ -60,9 +60,9 @@ class Onemillion
 		array999 = number.to_s.split("")
 
 		if array999.length == 3
-			@words[array999[0].to_i] + " " + "hundred" + count_99(array999[1,2].join.to_i)
+			@words[array999[0].to_i] + " hundred" + above100?(number) + count_99(array999[1,2].join.to_i)
 		else 
-			count_99(array999.join.to_i)
+			count_99(number)
 		end
 
 	end
@@ -73,7 +73,7 @@ class Onemillion
 		
 		if num == 0
 			 ""
-		elsif @words[array.join.to_i].nil? 
+		elsif @words[num].nil? 
 			@words[(array[0] + "0").to_i] + " " + @words[array[1].to_i]
 		else 
 			@words[array.join.to_i]

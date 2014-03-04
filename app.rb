@@ -1,6 +1,7 @@
-require './lib/one_million.rb'
 
-onemill = Onemillion.new
+require './lib/one_mill.rb'
+
+onemill = One_million.new
 
 onemill.convert(2)
 

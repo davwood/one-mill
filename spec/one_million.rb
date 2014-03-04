@@ -1,16 +1,7 @@
 require 'spec_helper'
 
-<<<<<<< HEAD
-describe Onemillion do 
-	let(:converter) { Onemillion.new }
-=======
-describe One_million do 
-	let(:converter) { One_million.new }
->>>>>>> d865002e1397e5f3d2b253876a48c4df63ab9977
-
-  it "should convert the number '21' to the word 'twenty one' " do
-    expect(converter.count_99(21)).to eq "twenty one"
-  end
+describe Counting do 
+	let(:converter) { Counting.new }
 
 	it "should convert the number '1' to the word 'one' " do
 
